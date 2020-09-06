@@ -9,6 +9,7 @@ class Config:
     yc_oauth_token: str
     yc_folder_id: str
     data_path: str
+    debug_enabled: bool
 
     @staticmethod
     def create_from_env() -> 'Config':
@@ -18,6 +19,10 @@ class Config:
             yc_oauth_token=os.getenv('YC_OAUTH_TOKEN'),
             yc_folder_id=os.getenv('YC_FOLDER_ID'),
             data_path=os.getenv('DATA_PATH'),
+            debug_enabled=(
+                True if os.getenv('DEBUG_ENABLED') in ['1', 'true', 'yes', 'on']
+                else False
+            ),
         )
 
 

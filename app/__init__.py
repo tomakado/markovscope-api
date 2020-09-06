@@ -1,4 +1,5 @@
 import json
+import logging
 from typing import Dict
 
 import pandas as pd
@@ -8,6 +9,10 @@ from app.config import CONFIG
 from app.horoscope.generator.generator import HoroscopeGenerator
 from app.horoscope.model import TextModel
 from app.horoscope.text_enhancer import YandexTranslateTextEnhancer
+
+logging.basicConfig(
+    level=logging.DEBUG if CONFIG.debug_enabled else logging.INFO
+)
 
 
 class MarkovscopeApplication:
