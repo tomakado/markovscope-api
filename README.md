@@ -2,6 +2,8 @@
 
 Web service to generate horoscopes in Russian (other languages planned for future versions). It uses Markov Chains to generate sequence of words and Yandex.Translate API to enhance texts and make them more “consistent”.
 
+[Try Demo](https://t.me/markovscope_bot)
+
 This project started as a joke, but actually has commercial application.
 
 **NOTE:** If you need collected data set please e-mail me (look for contact e-mail address [on my profile](https://github.com/tomakado)) or DM me via [Telegram](https://t.me/tomakado).
